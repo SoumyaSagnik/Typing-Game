@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #322059;
+}
+
+.container {
+    background-color: rgb(167, 44, 87);
+    padding: 1rem;
+    border-radius: .5rem;
+    width: 45rem;
+    max-width: 90%;
+    font-size: 1.2rem;
+}
+
+.timer {
+    position: absolute;
+    top: 3rem;
+    font-size: 4.5rem;
+    color: rgb(167, 44, 87);
+    font-weight: bold;
+}
+
+.content {
+    margin-bottom: 1rem;
+    margin-left: calc(.125rem + .5rem);
+    margin-right: calc(.125rem + .5rem);
+}
+
+.input {
+    background-color: transparent;
+    outline: none;
+    border: .125rem solid rgb(132, 17, 57);
+    width: 100%;
+    resize: none;
+    height: 12rem;
+    border-radius: .5rem;
+    padding: .5rem;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.input::placeholder {
+    color: rgb(132, 17, 57);
+}
+
+.input:focus {
+    border-color: black;
+}
+
+.correct {
+    color: rgb(32, 206, 32);
+}
+
+.incorrect {
+    color: rgb(110, 11, 11);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.tick-animation {
+    position: absolute;
+    bottom: 5rem;
+}
+
+::selection {
+    background-color: whitesmoke;
+    color: black;
+}

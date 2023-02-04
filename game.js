@@ -5,7 +5,7 @@ const typingSpace = document.querySelector(".input");
 const timer = document.querySelector(".timer");
 let startTime;
 
-typingSpace.addEventListener('input', () => {
+const inputTrigger = () => {
     const contentArray = content.querySelectorAll('span');
     const inputArray = typingSpace.value.split('');
     let correct = true;
@@ -28,13 +28,14 @@ typingSpace.addEventListener('input', () => {
     })
 
     if (correct) {
+        typingSpace.removeEventListener('input', inputTrigger);
         displayTick();
         setTimeout(function () {
             renderNewQuote();
             removeTick();
         }, 1500);
     }
-})
+}
 
 function fetchQuote() {
     return fetch(API_URL)
@@ -43,6 +44,7 @@ function fetchQuote() {
 }
 
 async function renderNewQuote() {
+    typingSpace.addEventListener('input', inputTrigger);
     const quote = await fetchQuote();
     content.innerHTML = "";
     quote.split('').forEach(char => {

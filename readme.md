@@ -12,4 +12,4 @@
 
 ### Try out now.
 
-<a href="https://typing-game-ssk.netlify.app/" target="_blank">Play</a>
+<a href="https://typing-game-ssk.netlify.app/" target="blank">Play</a>
